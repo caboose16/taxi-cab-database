@@ -1,0 +1,14 @@
+SQL> get Q2.sql
+  1  SELECT COUNT(miles_driven) as NUMBER_OF_JOBS, SUM(miles_driven) as TOTAL_MILES_DRIVEN
+  2  FROM Job
+  3* WHERE contract_ID = '&contract_ID'
+SQL> /
+Enter value for contract_id: 1
+old   3: WHERE contract_ID = '&contract_ID'
+new   3: WHERE contract_ID = '1'
+
+NUMBER_OF_JOBS TOTAL_MILES_DRIVEN                                                                                                   
+-------------- ------------------                                                                                                   
+             2                  9                                                                                                   
+
+SQL> spool off

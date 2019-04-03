@@ -1,0 +1,28 @@
+SPOOL report.txt
+SET LINESIZE 100
+SET PAGESIZE 60
+
+SET FEEDBACK OFF
+TTITLE CENTER 'EMPLOYEE REPORT' SKIP 1 CENTER 'As of ' _DATE
+BREAK ON employee_ID
+COLUMN employee_ID HEADING 'Employee ID'
+COLUMN office_ID HEADING 'Office ID'
+COLUMN Fname HEADING 'First Name'
+COLUMN Lname HEADING 'Last Name'
+COLUMN sex HEADING 'Sex'
+COLUMN phone_number HEADING 'Phone Number'
+COLUMN title HEADING 'Title'
+
+SELECT employee_ID, Lname ||','|| Fname AS Employee, title, office_ID
+FROM Employee
+ORDER BY employee_ID, Lname;
+
+SET FEEDBACK ON
+CLEAR BREAK
+COLUMN employee_ID CLEAR
+COLUMN office_ID CLEAR
+COLUMN Fname CLEAR
+COLUMN Lname CLEAR
+COLUMN title CLEAR
+
+SPOOL off

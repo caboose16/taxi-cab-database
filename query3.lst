@@ -1,0 +1,12 @@
+SQL> get Q3.sql
+  1  SELECT bus_client_ID, address
+  2* FROM Business_Client
+SQL> /
+
+BUS_CLIENT_ID ADDRESS                                                                                                               
+------------- ---------------------------------------------------------------                                                       
+            1 01 Corporate St, New York City, NY                                                                                    
+            2 03 Corporate St, New York City, NY                                                                                    
+            3 06 Corporate St, New York City, NY                                                                                    
+
+SQL> spool off

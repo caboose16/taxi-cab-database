@@ -1,0 +1,11 @@
+SQL> get Q1.sql
+  1  SELECT AVG(miles_driven) AS Average_Milage
+  2  FROM Job
+  3* WHERE miles_driven IS NOT NULL
+SQL> /
+
+AVERAGE_MILAGE                                                                                                                      
+--------------                                                                                                                      
+    4.33333333                                                                                                                      
+
+SQL> spool off

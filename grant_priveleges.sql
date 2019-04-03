@@ -1,0 +1,10 @@
+GRANT ALL PRIVILEGES ON Office TO jduncan;
+GRANT ALL PRIVILEGES ON Employee TO jduncan;
+GRANT ALL PRIVILEGES ON driver To jduncan;
+GRANT ALL PRIVILEGES ON taxi TO jduncan;
+GRANT ALL PRIVILEGES ON Private_Client TO jduncan;
+GRANT ALL PRIVILEGES ON Business_Client TO jduncan;
+GRANT ALL PRIVILEGES ON Contract TO jduncan;
+GRANT ALL PRIVILEGES ON Job TO jduncan;
+GRANT ALL PRIVILEGES ON Job_Status TO jduncan;
+

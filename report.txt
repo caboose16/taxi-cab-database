@@ -1,0 +1,12 @@
+
+                                           EMPLOYEE REPORT                                          
+                                           As of 05-JUN-18                                          
+Employee ID EMPLOYEE                        Title                             Office ID             
+----------- ------------------------------- -------------------------------- ----------             
+          1 Smith,John                      Manager                                   1             
+          2 Doe,Jane                        Janitor                                   1             
+          3 Ruiz,Jorge                      Manager                                   2             
+          4 Shooster,Jacob                  Manager                                   3             
+          5 Jones,Justin                    Secretary                                 2             
+          6 Subban,PK                       Manager                                   4             
+          7 Jones,Bridgette                 Manager                                   5             

@@ -1,0 +1,322 @@
+SQL> @dd.sql
+
+TABLE_NAME                     COMMENTS                                                                                             
+------------------------------ ---------------------------------------------------------------------------------------------------- 
+BUSINESS_CLIENT                                                                                                                     
+CONTRACT                       Contracts with business clients                                                                      
+DEPARTMENT                     Employees at CSUSB                                                                                   
+DEPENDENT                      Name of employee's dependent                                                                         
+DEPT_LOCATIONS                 locations of Departments                                                                             
+DRIVER                         information on individual drivers                                                                    
+EMPLOYEE                       information on individual employees                                                                  
+JOB                            Details of a non-shared ride job                                                                     
+JOB_STATUS                                                                                                                          
+OFFICE                         Office                                                                                               
+PRIVATE_CLIENT                 Non-Business Clients                                                                                 
+
+TABLE_NAME                     COMMENTS                                                                                             
+------------------------------ ---------------------------------------------------------------------------------------------------- 
+PROJECT                        Name of Projects                                                                                     
+TAXI                           information on individual taxis                                                                      
+WORK_ONS                       Name of projects an employee is involved                                                             
+LIST_MIN_SALARIES                                                                                                                   
+LIST_JOB_TITLE_120_SALARY                                                                                                           
+LIST_JOB_MIN_SALARY                                                                                                                 
+LIST_JOB_ID_TITLE                                                                                                                   
+LIST_DISTINCT_MIN_SALARIES                                                                                                          
+LIST_COL_WITH_NULL_02                                                                                                               
+LIST_COLUMNS_WITH_NULL_01                                                                                                           
+DEPTMGR                                                                                                                             
+
+TABLE_NAME                     COMMENTS                                                                                             
+------------------------------ ---------------------------------------------------------------------------------------------------- 
+CONC_MULTIPLE_COL_CHAR_STR                                                                                                          
+CONC_MULTIPLE_COL                                                                                                                   
+ARITHMETIC_EXPRESSION_TEST_03                                                                                                       
+ARITHMETIC_EXPRESSION_TEST_02                                                                                                       
+ARITHMETIC_EXPRESSION_TEST_01                                                                                                       
+ALL_COLUMNS_JOBS                                                                                                                    
+
+28 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+OFFICE                         OFFICE_ID                                                                                            
+unique ID for each office                                                                                                           
+                                                                                                                                    
+OFFICE                         PHONE_NUMBER                                                                                         
+Clients 10 digit Phone Number - Format: 01233456789                                                                                 
+                                                                                                                                    
+OFFICE                         ADDRESS                                                                                              
+Clients Address - Format: 12345 Main St, City, State                                                                                
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+OFFICE                         EMPLOYEE_ID                                                                                          
+Foreign key identifying manager for office                                                                                          
+                                                                                                                                    
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+EMPLOYEE                       EMPLOYEE_ID                                                                                          
+                                                                                                                                    
+                                                                                                                                    
+EMPLOYEE                       OFFICE_ID                                                                                            
+foreign key denoting which office employee assigned too                                                                             
+                                                                                                                                    
+EMPLOYEE                       FNAME                                                                                                
+First name of employee cannot be null                                                                                               
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+EMPLOYEE                       LNAME                                                                                                
+Last name of employee cannot be null                                                                                                
+                                                                                                                                    
+EMPLOYEE                       SEX                                                                                                  
+employee gender                                                                                                                     
+                                                                                                                                    
+EMPLOYEE                       PHONE_NUMBER                                                                                         
+Employees 10 digit Phone Number - Format: 01233456789                                                                               
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+EMPLOYEE                       TITLE                                                                                                
+position employee works in company                                                                                                  
+                                                                                                                                    
+
+7 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+DRIVER                         DRIVER_ID                                                                                            
+Primary key to id drivers                                                                                                           
+                                                                                                                                    
+DRIVER                         FNAME                                                                                                
+First name of driver cannot be null                                                                                                 
+                                                                                                                                    
+DRIVER                         LNAME                                                                                                
+Last name of driver cannot be null                                                                                                  
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+DRIVER                         SEX                                                                                                  
+driver gender                                                                                                                       
+                                                                                                                                    
+DRIVER                         DOB                                                                                                  
+driver date of birth - Format: mmddyyyy                                                                                             
+                                                                                                                                    
+DRIVER                         LOCATION                                                                                             
+Location of driver - Format: 12345 street city zip                                                                                  
+                                                                                                                                    
+
+6 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+TAXI                           TAXI_ID                                                                                              
+                                                                                                                                    
+                                                                                                                                    
+TAXI                           EMPLOYEE_ID                                                                                          
+Foreign key to link taxi to owner                                                                                                   
+                                                                                                                                    
+TAXI                           MODEL                                                                                                
+model of taxi                                                                                                                       
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+TAXI                           MAKE                                                                                                 
+make of taxi                                                                                                                        
+                                                                                                                                    
+TAXI                           COLOR                                                                                                
+color of taxi                                                                                                                       
+                                                                                                                                    
+TAXI                           REGISTRATION_TYPE                                                                                    
+Two digit code for registration type                                                                                                
+                                                                                                                                    
+
+6 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+PRIVATE_CLIENT                 PRIVATE_CLIENT_ID                                                                                    
+                                                                                                                                    
+                                                                                                                                    
+PRIVATE_CLIENT                 FIRST_NAME                                                                                           
+                                                                                                                                    
+                                                                                                                                    
+PRIVATE_CLIENT                 LAST_NAME                                                                                            
+                                                                                                                                    
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+PRIVATE_CLIENT                 ADDRESS                                                                                              
+Client's Address - Format: 12345 Main St, City, State                                                                               
+                                                                                                                                    
+PRIVATE_CLIENT                 PHONE_NUMBER                                                                                         
+Client's 10 digit Phone Number - Format: 01233456789                                                                                
+                                                                                                                                    
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+BUSINESS_CLIENT                BUS_CLIENT_ID                                                                                        
+                                                                                                                                    
+                                                                                                                                    
+BUSINESS_CLIENT                FIRST_NAME                                                                                           
+                                                                                                                                    
+                                                                                                                                    
+BUSINESS_CLIENT                LAST_NAME                                                                                            
+                                                                                                                                    
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+BUSINESS_CLIENT                ADDRESS                                                                                              
+                                                                                                                                    
+                                                                                                                                    
+BUSINESS_CLIENT                PHONE_NUMBER                                                                                         
+                                                                                                                                    
+                                                                                                                                    
+BUSINESS_CLIENT                CONTRACT_ID                                                                                          
+                                                                                                                                    
+                                                                                                                                    
+
+6 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+CONTRACT                       CONTRACT_ID                                                                                          
+                                                                                                                                    
+                                                                                                                                    
+CONTRACT                       START_DATE                                                                                           
+Date the contract begins                                                                                                            
+                                                                                                                                    
+CONTRACT                       END_DATE                                                                                             
+Date the contract ends                                                                                                              
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+CONTRACT                       FIXED_FEE                                                                                            
+The office ID that the contract is run by                                                                                           
+                                                                                                                                    
+CONTRACT                       NO_OF_JOBS                                                                                           
+The max number of jobs the fixed fee is elegible for                                                                                
+                                                                                                                                    
+CONTRACT                       OFFICE_ID                                                                                            
+                                                                                                                                    
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+CONTRACT                       JOBS_FINISHED                                                                                        
+The number of jobs finished under the contract                                                                                      
+                                                                                                                                    
+
+7 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+JOB                            JOB_ID                                                                                               
+                                                                                                                                    
+                                                                                                                                    
+JOB                            PRIVATE_CLIENT_ID                                                                                    
+The private client's id for the job if applicable                                                                                   
+                                                                                                                                    
+JOB                            EMPLOYEE_ID                                                                                          
+The ID for the employee who is driving the client to the destination                                                                
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+JOB                            PICKUP_LOCATION                                                                                      
+The location where the client will be pickup up at                                                                                  
+                                                                                                                                    
+JOB                            PICKUP_DATE                                                                                          
+The date when the client will be picked up at                                                                                       
+                                                                                                                                    
+JOB                            DROP_OFF_LOCATION                                                                                    
+The location where the client will be dropped of at                                                                                 
+                                                                                                                                    
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+JOB                            DROP_OFF_DATE                                                                                        
+The date the client was dropped off at                                                                                              
+                                                                                                                                    
+JOB                            CONTRACT_ID                                                                                          
+The ID of the contract the job is being done under. Only used for business clients                                                  
+                                                                                                                                    
+JOB                            MILES_DRIVEN                                                                                         
+The amount of miles driven during the job. Only necessary for private clients                                                       
+                                                                                                                                    
+
+9 rows selected.
+
+
+TABLE_NAME                     COLUMN_NAME                                                                                          
+------------------------------ ------------------------------                                                                       
+COMMENTS                                                                                                                            
+----------------------------------------------------------------------------------------------------                                
+JOB_STATUS                     JOB_ID                                                                                               
+                                                                                                                                    
+                                                                                                                                    
+JOB_STATUS                     COMPLETED                                                                                            
+                                                                                                                                    
+                                                                                                                                    
+JOB_STATUS                     NOTES                                                                                                
+                                                                                                                                    
+                                                                                                                                    
+
+SQL> spool off
